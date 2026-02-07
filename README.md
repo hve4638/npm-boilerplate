@@ -91,7 +91,7 @@ describe('testsuite', ()=>{
 });
 ```
 
-테스트 코드를 작성하고 `yarn test` 를 통해 단위 테스트를 수행할 수 있습니다
+테스트 코드를 작성하고 `pnpm test` 를 통해 단위 테스트를 수행할 수 있습니다
 
 ### CommonJS/ESM 대응
 
