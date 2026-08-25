@@ -37,9 +37,8 @@ export default [
       plugins: [
           dts({
               compilerOptions: {
-                  "baseUrl": "./",
                   "paths": {
-                    "@/*": ["src/*"],
+                    "@/*": ["./src/*"],
                   }
               },
           }),

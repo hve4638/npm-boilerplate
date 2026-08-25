@@ -1,4 +1,4 @@
-## npm-boilderplate
+## npm-boilerplate
 
 node.js 프로젝트 및 npm 패키지 생성을 위한 템플릿 레포지터리
 
@@ -6,7 +6,8 @@ node.js 프로젝트 및 npm 패키지 생성을 위한 템플릿 레포지터�
 
 - typescript
     - `@` 별칭
-- jest 단위테스트 프레임워크
+- tsx (`pnpm dev` 로 빌드 없이 `src/index.ts` 실행)
+- vitest 단위테스트 프레임워크
 - rollup 번들러
     - CommonJS/ESM 대응
 - 미리 작성된 .npmignore
@@ -66,23 +67,24 @@ plugins: [
 
 ```ts
 // 별칭 미사용
-import idea from '../../../featrues/idea'
+import idea from '../../../features/idea'
 
 // 별칭 사용
-import idea from '@/featrues/idea'
+import idea from '@/features/idea'
 ```
 
-임포트 시 `@` 별칭을 통패 프로젝트 기준의 경로로 접근할 수 있습니다
+임포트 시 `@` 별칭을 통해 프로젝트 기준의 경로로 접근할 수 있습니다
 
 별칭 추가 시 다음을 수정해야 합니다
 - `tsconfig.json` : "compilerOptions.paths" 에 별칭 추가
 - `rollup.config.js` : `dts()` 내의 옵션에서 `tsconfig.json`에서 한 것과 동일하게 변경
-- `jest.config.ts` : "moduleNameMapper" 에 별칭 추가
+- `vitest.config.ts` : "resolve.alias" 에 별칭 추가
 
-### jest 단위테스트 프레임워크
+### vitest 단위테스트 프레임워크
 
 ```ts
 // example.test.ts
+import { describe, test, expect } from 'vitest';
 
 describe('testsuite', ()=>{
     test('test 1', ()=>{

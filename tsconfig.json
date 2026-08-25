@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "isolatedModules": true,
-        "moduleResolution": "node10",
+        "moduleResolution": "bundler",
         "target": "es2022",
         
         "forceConsistentCasingInFileNames": true, /* 대소문자 구분 규칙 */
@@ -22,9 +22,10 @@
         "skipLibCheck": true,
         
         "outDir" : "./dist",
-        "baseUrl": "./",
+        "rootDir": "./src",
+        "types": ["node"],
         "paths": {
-          "@/*": ["src/*"],
+          "@/*": ["./src/*"],
         }
     },
     "include": [

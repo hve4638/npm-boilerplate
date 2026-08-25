@@ -6,6 +6,6 @@ coverage/
 
 tsconfig.json
 rollup.config.js
-jest.config.ts
+vitest.config.ts
 
 *.tgz
